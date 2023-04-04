@@ -1,97 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".usermanage">
-
-    <EditText
-        android:id="@+id/deleteReader1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/searchreader"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="0dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Enter Username to Delete"
-        android:minHeight="48dp"
-        android:text="Enter Username to Delete" />
-
-    <EditText
-        android:id="@+id/r_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/delreader"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="15dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/rusername"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/r_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/r_name"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="2dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r_name" />
-
-    <EditText
-        android:id="@+id/user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/r_password"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="16dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/real_name"
-        android:inputType=""
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r_password"
-        tools:ignore="TextFields" />
-
-    <EditText
-        android:id="@+id/r_sex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/user_name"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="16dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="sex"
-        android:inputType=""
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_name" />
-
-    <EditText
-        android:id="@+id/r_phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/r_sex"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="23dp"
-        android:ems="10"
-        android:hint="phone"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/r_sex" />
-
 
     <Button
         android:id="@+id/searchreader"
@@ -99,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
         android:layout_marginTop="124dp"
-        android:text="View ReaderS"
+        android:text="search reader"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,9 +20,8 @@
         android:id="@+id/addreader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/r_phone"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="92dp"
         android:text="add reader"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/delreader" />
@@ -118,11 +30,10 @@
         android:id="@+id/delreader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/searchreader"
         android:layout_marginStart="132dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="120dp"
         android:text="delete reader"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchreader" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

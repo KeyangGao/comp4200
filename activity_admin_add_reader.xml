@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.bookmanager.admin.registerActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="add reader"
+        android:textColor="#37302F"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/r_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/r_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="real name"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/r_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="sex"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/r_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="phone"
+        android:minHeight="48dp" />
+
+
+    <Button
+        android:id="@+id/r_register"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_alignBaseline="@+id/r_back"
+        android:layout_alignEnd="@+id/r_password"
+        android:layout_alignRight="@+id/r_password"
+        android:layout_alignBottom="@+id/r_back"
+        android:layout_marginTop="20dp"
+        android:background="#D1EEEE"
+        android:text="add"
+        android:textColor="#37302F"
+        android:textSize="15sp" />
+</LinearLayout>
