@@ -37,7 +37,7 @@ public class databaseHelp extends SQLiteOpenHelper {
 
     public static final String Creat_table2="create table "+Table_Book+"("
             +id+" integer primary key autoincrement,"+Book_Id+","+Book_Name+","
-            +Book_Writer+","+Book_Publicer+","+Book_Comment+","+Book_Img+")";
+            +Book_Writer+","+Book_Publicer+","+Book_Comment+")";
 
 
     private static final String Creat_table3 = "create table borrow(_Bid integer primary key autoincrement," +
@@ -49,7 +49,7 @@ public class databaseHelp extends SQLiteOpenHelper {
         super(context, DB_NAME, null, 2);
     }
 
-    static SQLiteDatabase db;
+    SQLiteDatabase db;
 
     //add user
     public void insert(ContentValues values) {
@@ -60,7 +60,7 @@ public class databaseHelp extends SQLiteOpenHelper {
 
     //add book
     public boolean inserbooktdata(String bookid,String name,String writer,
-                                  String publicer,String comment,String img){
+                                  String publicer,String comment){
         db=this.getReadableDatabase();
         ContentValues values=new ContentValues();
         values.put(Book_Id,bookid);
@@ -68,7 +68,6 @@ public class databaseHelp extends SQLiteOpenHelper {
         values.put(Book_Writer,writer);
         values.put(Book_Publicer,publicer);
         values.put(Book_Comment,comment);
-        values.put(Book_Img,img);
         long line = db.insert("bookinfo",null,values);
         db.close();
         if(line!=-1){
@@ -156,37 +155,6 @@ public class databaseHelp extends SQLiteOpenHelper {
         db.close();
 
     }
-    /////////////////////////////////////////////////////////////////////////////////
-
-    public Boolean delete(String name)
-    {
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from admin where name = ?", new String[]{name});
-        if (cursor.getCount() > 0) {
-            long result = db.delete("admin", "name=?", new String[]{name});
-            if (result == -1) {
-                return false;
-            } else {
-                return true;
-            }
-        } else {
-            return false;
-        }
-    }
-
-
-
-    /////////////////////////////////////////////////////////////////////////////////
-
-    //cursor to query through results for admin
-    public Cursor getdata()
-    {
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from admin", null);
-        return cursor;
-    }
-
-///////////////////////////////////////////////////////////////////////////////////
 
     //list borrow books information
     public Cursor queryborrowinfo() {
